@@ -82,13 +82,13 @@ jobs:
             fi
             echo "{ \"version\": 2, \"name\": \"hugo-fresh\", \"alias\": \"${URL}\", \"builds\": [{ \"src\": \"**\", \"use\": \"@now/static\" }] }" >> now.json
 
-      - run:
-          name: Install now CLI
-          command: |
-            apk add --update npm
-            npm config set unsafe-perm true
-            npm install -g now@16.3.1
-      - run:
-          name: Publish to now.sh
-          working_directory: my-site/public
-          command: now --prod --token ${NOW_TOKEN}
+#      - run:
+#          name: Install now CLI
+#          command: |
+#            apk add --update npm
+#            npm config set unsafe-perm true
+#            npm install -g now@16.3.1
+#      - run:
+#          name: Publish to now.sh
+#          working_directory: my-site/public
+#          command: now --prod --token ${NOW_TOKEN}
